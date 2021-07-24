@@ -8,6 +8,7 @@ import MovieHOC from "./HOC/Movie.HOC";
 import HomePage from "./pages/Home.page";
 import Movie from "./pages/Movie.page";
 
+
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
