@@ -1,31 +1,34 @@
-import React from "react";
-
-const Poster = (props) => {
-  return (
-    <>
-      <div className="flex flex-col items-start gap-2 px-1 md:px-3">
-        <div className="h-40 md:h-80">
-          <img
-            src={props.src}
-            alt={props.title}
-            className="w-full h-full rounded-md"
-          />
-        </div>
-        <h3
-          className={`text-lg font-bold ${
-            props.isDark ? "text-white" : "text-gray-700"
-          }`}
-        >
-          {props.title}
-        </h3>
-        <p
-          className={`text-sm ${props.isDark ? "text-white" : "text-gray-700"}`}
-        >
-          {props.subtitle}
-        </p>
-      </div>
-    </>
-  );
+const settings = {
+  infinite: false,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 4,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 
-export default Poster;
+export default settings;
